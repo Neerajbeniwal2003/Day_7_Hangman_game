@@ -85,11 +85,3 @@ while not game_over:
     if "_" not in display:
         game_over=True
         print("*******************YOU WIN*******************")
-    
-    
-    
-        
-    
-
-
-
