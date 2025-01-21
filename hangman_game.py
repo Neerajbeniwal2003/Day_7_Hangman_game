@@ -1,69 +1,17 @@
 #**************STEP1******************** 
 
 #TODO 1:to choose a random word form a list of words and assing it to a variable
-hangmanpics = [r'''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========''',r'''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========''',r'''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========''',r'''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''',r'''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========''',r'''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========''',r'''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========''']
 
 import hangmanart
 print("WELCOME TO HANGMAN GAME")
 print(hangmanart.logo)
 print(hangmanart.hand_image)
 
-
 import random
-_words="ant babboon badger bat bear beaver camel cat clam cobra cougar coyote crow deer dog donkey duck eagle ferret fox frog goat goose hawk lion lizard llama mole rat raven rhino shark sheep spider toad turkey turtle wolf wombat zebra"
-list_of_words=_words.split()
+import hangmanwords
+list_of_words=hangmanwords._words.split()
 random_word_position=random.randint(0,len(list_of_words))
 choosen_word=list_of_words[random_word_position]
-print(choosen_word)
 
 #TODO 8: create a variable called "lives" and keep the track of how many lives user have left
 #set lives equal to 6.
@@ -131,7 +79,7 @@ while not game_over:
         print("******************YOU LOSE******************")
     
   
-    print(hangmanpics[lives])
+    print(hangmanart.hangmanpics[lives])
     
     
     if "_" not in display:
